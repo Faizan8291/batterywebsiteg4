@@ -1,0 +1,146 @@
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: #0056b3;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/*Navigation Styles adt1*/
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #00408a;
+    border-radius: 5px;
+}
+    
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+/* Footer Styles */
+footer {
+    text-align: center; /* Centered text in footer */
+    padding: 10px 0; /* Padding for footer */
+    background: #333; /* Dark background for footer */
+    color: white; /* White text in footer */
+    position: relative; /* Allowing footer to stay below content */
+}
+
+footer ul {
+    list-style: none; /* Removing default list styles */
+    padding: 0; /* Removing default padding */
+}
+
+footer ul li {
+    display: inline; /* Inline display for footer links */
+    margin-right: 15px; /* Right margin for spacing */
+}
+
+footer ul li a {
+    color: white; /* White link color */
+    text-decoration: none; /* Removing underline from links */
+}
+
+footer ul li a:hover {
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+/* Specific Styles for Sections */
+#about, #methodology, #results {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#about h2, #methodology h2, #results h2 {
+    color: #0056b3;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #0056b3;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    #about, #methodology, #results {
+        padding: 15px;
+    }
+}

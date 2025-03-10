@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results | Battery Classification Project</title>
+    <link rel="stylesheet" href="../css/result-styles.css">
+</head>
+<body>
+    <header>
+        <h1>Prediction Of RUL</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="methodology.html">Methodology</a></li>
+                <li><a href="classification.html">Classification</a></li>
+                <li><a href="results.html" class="active">Prediction</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="parameter-input">
+            <h2>Input Battery Parameters</h2>
+            <form id="parameterForm">
+                <label for="voltage">Voltage Load (V):</label>
+                <input type="number" id="voltage" name="voltage" step="0.1" required><br><br>
+
+                <label for="current">Current Load (A):</label>
+                <input type="number" id="current" name="current" step="0.1" required><br><br>
+
+                <label for="temperature">Temperature (°C):</label>
+                <input type="number" id="temperature" name="temperature" step="0.1" required><br><br>
+
+                <button type="button" onclick="generateChart()">Submit</button>
+            </form>
+        </section>
+
+        <section id="results">
+            <canvas id="batteryRadarChart" width="400" height="400"></canvas>
+
+            <h2>Project Findings</h2>
+            <p>Our machine learning models achieved high accuracy in classifying battery types based on training data...</p>
+
+            <h3>Performance Metrics:</h3>
+            <table>
+                <tr>
+                    <th>Model</th>
+                    <th>Accuracy</th>
+                    <th>Precision</th>
+                    <th>Recall</th>
+                </tr>
+                <tr>
+                    <td>Random Forest</td>
+                    <td>92%</td>
+                    <td>90%</td>
+                    <td>88%</td>
+                </tr>
+                <tr>
+                    <td>Support Vector Machine</td>
+                    <td>89%</td>
+                    <td>87%</td>
+                    <td>85%</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Battery Classification Project. All Rights Reserved.</p>
+        <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        let batteryRadarChart;
+        
+        function generateChart() {
+            const voltage = document.getElementById('voltage').value;
+            const current = document.getElementById('current').value;
+            const temperature = document.getElementById('temperature').value;
+
+            if (batteryRadarChart) {
+                batteryRadarChart.destroy();
+            }
+
+            const ctx = document.getElementById('batteryRadarChart').getContext('2d');
+            batteryRadarChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['Voltage', 'Current', 'Temperature'],
+                    datasets: [
+                        {
+                            label: 'Input Data',
+                            data: [voltage, current, temperature],
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 1,
+                        },
+                        {
+                            label: 'Ideal Levels',
+                            data: [100, 100, 100],
+                            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 1,
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            suggestedMax: 100,
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top'
+                        },
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+/* styles1.css */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif; /* Setting a default font for the body */
+    line-height: 1.6; /* Improved line spacing for better readability */
+    margin: 0; /* Removing default margins */
+    padding: 0; /* Removing default padding */
+    background-color: #f4f4f4; /* Light gray background for the body */
+}
+
+/* Header Styles */
+header {
+    background: #0056b3; /* Bootstrap primary color */
+    color: white; /* White text color */
+    padding: 20px; /* Padding around the header */
+    text-align: center; /* Centered text alignment */
+}
+
+header h1 {
+    margin: 0; /* Removing default margin */
+}
+
+/*Navigation Styles adt1*/
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #00408a;
+    border-radius: 5px;
+}
+    
+/*Navigation Styles adt2*/
+
+nav {
+    margin: 20px 0; /* Margins for spacing */
+}
+
+nav ul {
+    list-style: none; /* Removing default list styles */
+    padding: 0; /* Removing default padding */
+}
+
+nav ul li {
+    display: inline; /* Displaying list items inline */
+    margin-right: 15px; /* Right margin for spacing */
+}
+
+nav ul li a {
+    color: white; /* White link color */
+    text-decoration: none; /* Removing underline from links */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+
+
+
+
+/* Main Content Styles */
+main {
+    max-width: 800px; /* Limiting width for better readability */
+    margin: 20px auto; /* Centering the main content */
+    background: white; /* White background for main section */
+    padding: 20px; /* Padding for main section */
+    border-radius: 8px; /* Rounded corners for main section */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+section {
+    margin-bottom: 20px; /* Spacing between sections */
+}
+
+h2 {
+    color: #0056b3; /* Primary color for subheadings */
+}
+
+h3 {
+    color: #333; /* Darker color for tertiary headings */
+}
+
+/* Contact Form Styles */
+#contact {
+    background: #f9f9f9; /* Light background for the contact section */
+    padding: 20px; /* Padding for the contact section */
+    border-radius: 8px; /* Rounded corners for the section */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    margin-top: 20px; /* Margin above the contact section */
+}
+
+#contact h2 {
+    color: #007BFF; /* Primary color for the contact heading */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Spacing between form groups */
+}
+
+.form-group label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Spacing below labels */
+    font-weight: bold; /* Bold text for labels */
+    color: #333; /* Darker color for label text */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding for inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size for inputs */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0056b3; /* Primary color border on focus */
+    outline: none; /* Removing default outline */
+}
+
+button {
+    background: #0056b3; /* Primary color for buttons */
+    color: white; /* White text on buttons */
+    border: none; /* Removing default border */
+    padding: 10px 15px; /* Padding for buttons */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for buttons */
+}
+
+button:hover {
+    background: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .form-group {
+        margin-bottom: 10px; /* Reduced margin for smaller screens */
+    }
+
+    button {
+        width: 100%; /* Full width button on smaller screens */
+    }
+}
+
+
+/* Button Styles */
+button {
+    background: #007BFF; /* Primary color for buttons */
+    color: white; /* White text on buttons */
+    border: none; /* Removing default border */
+    padding: 10px 15px; /* Padding for buttons */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background: #0056b3; /* Darker shade on hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center; /* Centered text in footer */
+    padding: 10px 0; /* Padding for footer */
+    background: #333; /* Dark background for footer */
+    color: white; /* White text in footer */
+    position: relative; /* Allowing footer to stay below content */
+}
+
+footer ul {
+    list-style: none; /* Removing default list styles */
+    padding: 0; /* Removing default padding */
+}
+
+footer ul li {
+    display: inline; /* Inline display for footer links */
+    margin-right: 15px; /* Right margin for spacing */
+}
+
+footer ul li a {
+    color: white; /* White link color */
+    text-decoration: none; /* Removing underline from links */
+}
+
+footer ul li a:hover {
+    text-decoration: underline; /* Underline effect on hover */
+}
