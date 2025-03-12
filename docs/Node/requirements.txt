@@ -4,3 +4,4 @@ flask
 gunicorn
 pickle5
 scikit-learn
+build-essential
