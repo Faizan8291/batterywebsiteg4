@@ -45,7 +45,7 @@ document.getElementById("predictForm").addEventListener("submit", async function
     };
 
     try {
-        const response = await fetch("https://batterywebsiteg4.onrender.com/", {
+        const response = await fetch("https://batterywebsiteg4.onrender.com/predict", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(inputData)
