@@ -1,14 +1,3 @@
-const express = require("express");
-const cors = require("cors");
-const app = express();
-
-app.use(cors());
-app.use(express.json());
-
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
 document.getElementById("predictForm").addEventListener("submit", async function(event) {
     event.preventDefault();
 
@@ -23,7 +12,7 @@ document.getElementById("predictForm").addEventListener("submit", async function
     };
 
     try {
-        const response = await fetch("https://batterywebsiteg4.onrender.com/predict", {
+        const response = await fetch("http://localhost:5000/predict", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(inputData)
@@ -36,5 +25,3 @@ document.getElementById("predictForm").addEventListener("submit", async function
         document.getElementById("result").innerText = "Failed to fetch prediction.";
     }
 });
-
-
