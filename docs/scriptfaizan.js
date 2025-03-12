@@ -37,22 +37,4 @@ document.getElementById("predictForm").addEventListener("submit", async function
     }
 });
 
-app.post("/predict", async (req, res) => {
-    try {
-        console.log("Received request:", req.body);
 
-        // Assuming the Python backend is running on Render
-        const response = await fetch("https://batterywebsiteg4-python.onrender.com/predict", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(req.body)
-        });
-
-        const data = await response.json();
-        console.log("Python backend response:", data);
-        res.json(data);
-    } catch (error) {
-        console.error("Error calling Python backend:", error);
-        res.status(500).json({ error: "Failed to get prediction." });
-    }
-});
