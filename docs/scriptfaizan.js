@@ -26,7 +26,10 @@
 //     }
 // });
 
-
+const cors = require("cors");
+app.use(cors());
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 document.getElementById("predictForm").addEventListener("submit", async function(event) {
     event.preventDefault();
@@ -42,7 +45,7 @@ document.getElementById("predictForm").addEventListener("submit", async function
     };
 
     try {
-        const response = await fetch("http://localhost:5000/predict", {
+        const response = await fetch("https://batterywebsiteg4.onrender.com/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(inputData)
